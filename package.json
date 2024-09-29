@@ -10,14 +10,17 @@
     "run:dist": "vite preview",
     "build": "vite build",
     "check": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json",
+    "format": "prettier --write ./src",
+    "prepare": "husky install",
     "predeploy": "yarn check && yarn build",
-    "deploy": "gh-pages -d dist",
-    "format": "prettier --write ./src"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@tsconfig/svelte": "^5.0.4",
     "gh-pages": "^6.1.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "prettier-plugin-svelte": "^3.2.7",
     "svelte": "^4.2.18",
