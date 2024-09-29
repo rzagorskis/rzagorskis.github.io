@@ -2,7 +2,7 @@
 </script>
 
 <main>
-  <h1>Robert Zagorskis - Personal - what</h1>
+  <h1>Robert Zagorskis - Personal - hello</h1>
 
   <div class="card"></div>
 </main>
