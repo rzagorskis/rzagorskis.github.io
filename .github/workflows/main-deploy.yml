@@ -5,6 +5,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - run: git checkout HEAD^
       - run: echo "🔎 Installing modules" && yarn install
       - run: echo "🖥️ Deploying" && yarn deploy
       - run: echo "Deploy finished"
