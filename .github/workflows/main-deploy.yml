@@ -16,5 +16,5 @@ jobs:
       - run: git checkout HEAD^
       - run: echo "Installing modules" && yarn install
       - run: echo "Building" && yarn build
-      - run: echo "Deploying" && gh-pages -d dist -r https://${{ secrets.GH_PAGES_DEPLOY_TOKEN }}@github.com/rzagorskis/rzagorskis.github.io.git
+      - run: echo "Deploying" && yarn gh-pages -d dist -r https://${{ secrets.GH_PAGES_DEPLOY_TOKEN }}@github.com/rzagorskis/rzagorskis.github.io.git
       - run: echo "Deploy finished"
