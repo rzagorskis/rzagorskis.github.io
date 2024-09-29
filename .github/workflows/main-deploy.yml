@@ -18,4 +18,4 @@ jobs:
       - run: git checkout HEAD^
       - run: echo "Installing modules" && yarn install
       - run: echo "Building" && yarn build
-      - run: echo "Deploying" && yarn gh-pages -d dist -r https://${{ secrets.GITHUB_TOKEN }}@github.com/rzagorskis/rzagorskis.github.io.git
+      - run: echo "Deploying" && yarn gh-pages -d dist -u "${{ github.event.head_commit.author.name  }} <${{ github.event.head_commit.author.email  }}>" -r https://${{ secrets.GITHUB_TOKEN }}@github.com/rzagorskis/rzagorskis.github.io.git
