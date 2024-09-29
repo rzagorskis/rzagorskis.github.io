@@ -1,0 +1,10 @@
+name: Main - Deploy
+run-name: Deploying to gh-pages
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🔎 Installing modules" && yarn install
+      - run: echo "🖥️ Deploying" && yarn deploy
+      - run: echo "Deploy finished"
